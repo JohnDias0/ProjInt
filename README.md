@@ -1,27 +1,41 @@
-# ProjInt
+# Intenções para a Santa Missa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+Este repositório contém um site destinado a fazer anotações e imprimir intenções para a Santa Missa Católica Apostólica Romana.
 
-## Development server
+## Descrição
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este projeto consiste em um site simples onde os usuários podem registrar suas intenções para a Santa Missa. O site permite que os usuários preencham um formulário com suas intenções e, em seguida, imprima essas intenções para levá-las à Missa.
 
-## Code scaffolding
+## Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Preencher um formulário com intenções para a Santa Missa.
+- Imprimir as intenções preenchidas para levar à Missa.
+- Layout simples e intuitivo para facilitar o uso.
 
-## Build
+## Instalação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone este repositório: `git clone https://github.com/JohnDias0/projint.git`
+2. Navegue até o diretório do projeto: `cd projint/src/`
+3. Abra o arquivo `home.html` em seu navegador web.
 
-## Running unit tests
+## Tecnologias Utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- HTML5
+- CSS3
+- JavaScript
+- TailwindCSS
 
-## Running end-to-end tests
+## Contribuição
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Contribuições são bem-vindas! Se você quiser contribuir para este projeto, por favor, siga estas etapas:
 
-## Further help
+1. Fork este repositório
+2. Crie uma nova branch (`git checkout -b feature/nova-funcionalidade`)
+3. Faça commit das suas alterações (`git commit -am 'Adicione uma nova funcionalidade'`)
+4. Faça push para a branch (`git push origin feature/nova-funcionalidade`)
+5. Envie um pull request
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT).
+
