@@ -1,63 +1,113 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-footer{
-    color: white;
-    background-color: rgb(43, 55, 73);
-    width: 100vw;
+
+
+.footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    text-align: center;
+    padding: 1rem 0;
     position: fixed;
-    left: 0;
     bottom: 0;
-    margin: auto;
-}
-.container{
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
+    left: 0;
 }
 
-.title{
-    margin: auto;
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
 }
- a{
-    color: white;
+
+.social-media-left {
+    flex: 1;
+    text-align: left;
+    display: none;
+}
+
+.social-media-right {
+    flex: 1;
+    text-align: right;
+}
+
+.social-icon {
+    margin: 0 0.5rem;
+    color: #6c757d;
     text-decoration: none;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: color 0.1s;
 }
-a:hover{
-    color: rgb(240, 220, 108);
+
+.links .container {
+    padding: 2rem 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.column {
+    flex: 1;
+    min-width: 200px;
+    margin: 1rem;
+    text-align: left;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.link {
+    color: #6c757d;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.1s
+}
+
+.link:hover {
+    color:  rgb(235, 220, 134);;
     text-decoration: underline;
 }
-a:active {
-    color: #008585;
-}
-.pedrao{
-    width: 16vw;
-    height: 32vh;
-    margin: 0;
+.link:active{
+    color: #58d3d3;
 }
 
-.item1, .item2 {
-    flex-direction: column;
-    display: flex;
-    padding: 0 10vw;
+.copyright {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    margin-top: 1rem;
 }
-.item1 {
-    align-items: flex-start;
+
+@media (min-width: 992px) {
+    .social-media-left {
+        display: block;
+    }
+
+    .social-media-right {
+        text-align: center;
+    }
 }
-.item1 li, .item2 li{
-    list-style: none;
-    margin: 2.5vh;
+
+.logos{
+    border-radius: 50%;
+    width:3vw;
+    height: 6vh;
+    margin: 0 30px;
+    cursor: pointer;
+    transition:  transform 0.2s;
 }
-.item2 {
-    align-items: flex-end;
+.logos:hover {
+    transform: translateY(-2px);
 }
-img{
-    width:2vw;
-    height: 4vh;
-    display: inline-block;
+
+.logos:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+
+.pedrao {
+    max-width: 100px;
+    height: 10vh;
+    margin: auto;
+  }
