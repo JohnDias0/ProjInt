@@ -57,4 +57,9 @@ button:active {
     background-color: #008585;
     transform: translateY(0);
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
