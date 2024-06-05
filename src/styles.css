@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Maitree', serif;
+  }
+  
+  .font-tittle {
+    font-family: 'Libre Franklin',sans-serif;
+    font-size: xx-large;
+  }
+  
+  .font-subtittle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+  }
+  

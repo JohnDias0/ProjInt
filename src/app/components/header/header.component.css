@@ -11,7 +11,7 @@ img{
     border: none;
 }
 img:hover{
-    transform: translateY(-2px);
+    transform: translateY(-5px);
 }
 
 header{
@@ -24,8 +24,9 @@ header{
 h1{
     display: flex;
     align-items: center;
-    margin: auto;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-left: 30%;
+    margin-right: 13%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     
 }
 
@@ -43,7 +44,7 @@ button{
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.5s, transform 0.2s;
 }
 
 
