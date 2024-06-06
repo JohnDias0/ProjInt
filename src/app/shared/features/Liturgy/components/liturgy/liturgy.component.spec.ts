@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LiturgiaComponent } from './liturgia.component';
+import { LiturgyComponent } from './liturgy.component';
 
-describe('LiturgiaComponent', () => {
-  let component: LiturgiaComponent;
-  let fixture: ComponentFixture<LiturgiaComponent>;
+describe('LiturgyComponent', () => {
+  let component: LiturgyComponent;
+  let fixture: ComponentFixture<LiturgyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LiturgiaComponent]
+      imports: [LiturgyComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(LiturgiaComponent);
+    fixture = TestBed.createComponent(LiturgyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
