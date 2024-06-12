@@ -1,0 +1,64 @@
+*{
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+
+h2{
+    justify-content: center;
+    font-style: italic;
+}
+.data, .horario{
+    display: inline-flex;
+    margin: 20px;
+    flex-direction: column;
+    width: 40vw;
+    padding: 0px;
+    border: 0.1vw groove;
+    border-radius: 1vw;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.data{
+    padding-bottom: 2vh;
+}
+.horario input{
+    margin: auto;
+    margin-left: 0px;   
+}
+.right{
+    display: inline-flex;
+    justify-content: flex-start;
+}
+.left{
+    display: inline-flex;
+    justify-content: flex-end;
+}
+button{
+    display: inline-block;
+    padding:    6px 12px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #efdc6b;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.2s;
+}
+
+
+button:hover {
+    background-color: #f8e783;;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #006D77;
+    transform: translateY(0);
+}
