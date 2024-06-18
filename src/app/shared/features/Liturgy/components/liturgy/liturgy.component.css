@@ -1,48 +1,50 @@
-*{
-    margin: 20px;
+* {
+    margin: 2vw;
     padding: 0;
     box-sizing: border-box;
+}
+
+h2 {
+    justify-content: center;
+    font-style: italic;
     display: flex;
 }
 
-h2{
-    justify-content: center;
-    font-style: italic;
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10vh 0;
 }
-.data, .horario{
+
+.data, .horario {
     display: inline-flex;
-    margin: 20px;
+    margin: auto;
     flex-direction: column;
     width: 40vw;
     padding: 0px;
     border: 0.1vw groove;
     border-radius: 1vw;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
 }
 
-.data{
-    padding-bottom: 2vh;
-}
-.horario input{
+
+.horario input {
     margin: auto;
-    margin-left: 0px;   
+    margin-left: 0px;
 }
-.right{
-    display: inline-flex;
-    justify-content: flex-start;
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.left{
-    display: inline-flex;
-    justify-content: flex-end;
-}
-button{
-    display: inline-block;
-    padding:    6px 12px;
-    margin: 0 10px;
-    font-size: 16px;
+
+button {
+    font-size: 1.2em;
     font-weight: bold;
-    text-align: center;
-    text-decoration: none;
+    padding: 6px 12px;
+    margin: 10px;
     color: #fff;
     background-color: #efdc6b;
     border: none;
@@ -50,11 +52,17 @@ button{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: background-color 0.5s, transform 0.2s;
+    display: flex; /* Adiciona display flex ao botão */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
 }
 
+.btn a {
+    text-decoration: none;
+}
 
 button:hover {
-    background-color: #f8e783;;
+    background-color: #f8e783;
     transform: translateY(-2px);
 }
 
