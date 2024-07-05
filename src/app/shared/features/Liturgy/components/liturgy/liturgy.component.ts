@@ -1,18 +1,21 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import LiturgyService from '../../Services/LiturgyService';
+import { routes } from '../../../../../app.routes';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-liturgy',
   standalone: true,
-  imports: [],
+  imports: [ReactiveFormsModule], 
   templateUrl: './liturgy.component.html',
-  styleUrls: ['./liturgy.component.css']  // Corrigido de styleUrl para styleUrls
+  styleUrls: ['./liturgy.component.css']
 })
 export class LiturgyComponent implements OnInit {
   myForm!: FormGroup;
   @Input() InputData: { dom: number, horario: number } = { dom: 0, horario: 0 };
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.myForm = this.fb.group({
@@ -75,5 +78,16 @@ export class LiturgyComponent implements OnInit {
         console.log(error);
       }
     }
+  }
+
+  async handleSubmit(){
+    try {
+      console.log(this.InputData.dom, this.InputData.horario)
+      await LiturgyService(this.InputData.dom, this.InputData.horario)
+      this.router.navigate(['/intencoes']);
+    } catch (error) {
+      console.error(error)      
+    }
+
   }
 }

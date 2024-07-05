@@ -1,7 +1,7 @@
 import { Pastoral } from '../models/Pastoral';
 
 export class PastoralFactory {
-  private instances: Pastoral[] = [];
+  private instances: Pastoral[][] = [];
   constructor() {
     const TercoHomens: Pastoral = new Pastoral(0, 'Terço dos Homens');
     const LegioMariae: Pastoral = new Pastoral(1, 'Legião de Maria ');
@@ -25,10 +25,12 @@ export class PastoralFactory {
     const ServumMariae: Pastoral = new Pastoral(1, 'Servum Mariae');
     const Cerimoniarios: Pastoral = new Pastoral(2, 'Cerimonários');
     // const Coroinhas: Pastoral = new Pastoral(13, 'Coroinhas');
-    this.instances.push(TercoHomens, LegioMariae, Ministros, GOSemeando, Sagrado, MaesOram, CestaBasica, Financas, EMC, ECC, ServumMariae, Cerimoniarios)
+    this.instances.push([TercoHomens, LegioMariae, Ministros],[ GOSemeando, Sagrado, MaesOram],[ CestaBasica, Financas, EMC],[ ECC, ServumMariae, Cerimoniarios])
   }
 
   getInstances(){
     return this.instances
   }
 }
+
+export const pastoralFactory = new PastoralFactory()

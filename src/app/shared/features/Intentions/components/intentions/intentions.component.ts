@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './intentions.component.css'
 })
 export class IntentionsComponent {
-
 }

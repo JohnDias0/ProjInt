@@ -4,8 +4,9 @@ img{
     height: 10vh;
     display: inline-block;
     align-items: flex-start;
-    padding: 10px;
+    padding: 1.2vh;
     display: flex;
+    margin: 0 12.5vw 0 2.5vw;
     white-space: nowrap;
     transition: background-color 0.3s, transform 0.2s;
     border: none;
@@ -23,16 +24,16 @@ header{
 
 h1{
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 30%;
-    margin-right: 13%;
+    margin:auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     
 }
 
 button{
     display: inline-block;
-    padding:    6px 12px;
+    padding:   6px 12px;
     margin: 0 10px;
     font-size: 16px;
     font-weight: bold;
