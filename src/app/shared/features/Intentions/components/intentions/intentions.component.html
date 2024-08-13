@@ -1,1 +1,10 @@
-<p>intentions works!</p>
+<form   (ngSubmit)="onSubmit()" class="form-container">
+    <div *ngFor="let key of getCampoKeys()" class="form-field">
+        <label [for]="key">{{ key }}:</label>
+        <input #campo [id]="key" [name]="key" type="text" />
+      </div>
+    <button type="button" (click)="addField()">Adicionar Novo Campo</button>
+    <br>
+    <button type="submit">Enviar</button>
+  </form>
+  
