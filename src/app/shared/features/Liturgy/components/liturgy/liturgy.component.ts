@@ -7,27 +7,27 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-liturgy',
   standalone: true,
-  imports: [ReactiveFormsModule], 
+  imports: [ReactiveFormsModule],
   templateUrl: './liturgy.component.html',
-  styleUrls: ['./liturgy.component.css']
+  styleUrls: ['./liturgy.component.css'],
 })
 export class LiturgyComponent implements OnInit {
   myForm!: FormGroup;
-  @Input() InputData: { dom: number, horario: number } = { dom: 0, horario: 0 };
+  @Input() InputData: { dom: number; horario: number } = { dom: 6, horario: 0 };
 
   constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.myForm = this.fb.group({
       data: [''],
-      horario: ['']
+      horario: [''],
     });
 
-    this.myForm.get('data')?.valueChanges.subscribe(value => {
+    this.myForm.get('data')?.valueChanges.subscribe((value) => {
       this.handleInputChange('date', value);
     });
 
-    this.myForm.get('horario')?.valueChanges.subscribe(value => {
+    this.myForm.get('horario')?.valueChanges.subscribe((value) => {
       this.handleInputChange('horario', value);
     });
   }
@@ -39,21 +39,24 @@ export class LiturgyComponent implements OnInit {
         const diaDaSemana = data.getDay();
         const diaDoMes = data.getDate();
 
-        const isSunday = diaDaSemana === 0;
+        const isSunday = diaDaSemana === 6;
 
         if (!isSunday) {
-          throw new Error('A data selecionada não é um domingo. Verifique novamente.');
-        }
-
-        let contadorDomingos = 0;
-        for (let dia = 1; dia <= diaDoMes; dia++) {
-          const dataTemp = new Date(data.getFullYear(), data.getMonth(), dia);
-          if (dataTemp.getDay() === 0) {
-            contadorDomingos++;
+          console.log(diaDaSemana)
+          console.log('entrou no 1° if')
+        window.alert('Você selecionou Missa DOMINICAL. Selecione um domingo do mês!')
+        } else if (isSunday){
+          console.log(diaDaSemana)
+          console.log('entrou no 2° if')
+          let contadorDomingos = 0;
+          for (let dia = 1; dia <= diaDoMes; dia++) {
+            const dataTemp = new Date(data.getFullYear(), data.getMonth(), dia);
+            if (dataTemp.getDay() === 0) {
+              contadorDomingos++;
+            }
+            this.InputData.dom = contadorDomingos;
           }
         }
-        this.InputData.dom = contadorDomingos;
-
       } catch (error) {
         console.log(error);
       }
@@ -73,21 +76,24 @@ export class LiturgyComponent implements OnInit {
           default:
             throw new Error('Horário não especificado corretamente');
         }
-        console.log(this.InputData)
+        console.log(this.InputData);
       } catch (error) {
         console.log(error);
       }
     }
   }
 
-  async handleSubmit(){
+  async handleSubmit() {
     try {
-      console.log(this.InputData.dom, this.InputData.horario)
-      await LiturgyService(this.InputData.dom, this.InputData.horario)
+      console.log(this.InputData.dom, this.InputData.horario);
+      if(this.InputData.dom === 6){
+        throw new Error('Não foi selecionada uma data válida.')
+      }
+      await LiturgyService(this.InputData.dom, this.InputData.horario);
       this.router.navigate(['/intencoes']);
     } catch (error) {
-      console.error(error)      
+      window.alert(error)
+      console.error(error);
     }
-
   }
 }

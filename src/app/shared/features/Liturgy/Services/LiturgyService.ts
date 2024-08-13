@@ -8,6 +8,7 @@ async function LiturgyService(dom: number, hor: number ){
     const Liturgy: Pastoral = Scale[dom][hor]
     await sessionStorage.setItem('pastoral', Liturgy.getPastoral())
     console.log('Serviço de liturgia realizado com sucesso!')
+    console.log(Liturgy)
     } catch (error) {
         console.log(`Erro no serviço de liturgia: ${error}`)
     }
